@@ -17,8 +17,8 @@ public class MainActivity extends AppCompatActivity {
     public static final Random RANDOM = new Random();
     private Button rollDices;
     private ImageView imageView1, imageView2;
-    private int value1 = 0;
-    private int value2 = 0;
+    private int value1 = 1;
+    private int value2 = 2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,8 +35,8 @@ public class MainActivity extends AppCompatActivity {
                 value1 = randomDiceValue();
                 value2 = randomDiceValue();
 
-                int res1 = getResources().getIdentifier("dice_" + value1, "drawable", "com.example.dicerollapp2");
-                int res2 = getResources().getIdentifier("dice_" + value2, "drawable", "com.example.dicerollapp2");
+                int res1 = getResources().getIdentifier("ic_dice_" + value1, "drawable", "com.example.dicerollapp2");
+                int res2 = getResources().getIdentifier("ic_dice_" + value2, "drawable", "com.example.dicerollapp2");
 
                 imageView1.setImageResource(res1);
                 imageView2.setImageResource(res2);
@@ -48,8 +48,8 @@ public class MainActivity extends AppCompatActivity {
         if (savedInstanceState != null) {
             value1 = savedInstanceState.getInt("count");
             value2 = savedInstanceState.getInt("count2");
-            int res1 = getResources().getIdentifier("dice_" + value1, "drawable", "com.example.dicerollapp2");
-            int res2 = getResources().getIdentifier("dice_" + value2, "drawable", "com.example.dicerollapp2");
+            int res1 = getResources().getIdentifier("ic_dice_" + value1, "drawable", "com.example.dicerollapp2");
+            int res2 = getResources().getIdentifier("ic_dice_" + value2, "drawable", "com.example.dicerollapp2");
             imageView1.setImageResource(res1);
             imageView2.setImageResource(res2);
         }
